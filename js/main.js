@@ -824,18 +824,31 @@ jQuery(function ($) {
 				form.addClass('sending');    		
 
 				// Add Current URL
-				var formData = form.serialize();
-				formData += '&URL=' + window.location.href;
+				//var formData = form.serialize();
+				//formData += '&URL=' + window.location.href;
+				var name = form.find("input#InputFloatingName")[0].value;
+            	var email = form.find("input#InputFloatingEmail")[0].value;
+            	//var phone = form.find("input#phone")[0].value;
+           		var message = form.find("textarea#InputFloatingMessage")[0].value;
+				var formData = {
+					"subject": name+" sent you an enquiry via websitescene.co.uk",
+                    "name": name,
+                    //"phone": phone || '00000',
+                    "email": email,
+                    "message": message,
+                    'form_api_token':'e11h1zo3d731'
+				}
 		
 				// Ajax Call
 				$.ajax({
 					type: 'POST',
-					url: form.attr('action'),
+					url: "https://email-webservice.onrender.com/email/addemail",
+					dataType: "JSON",
 					data: formData,
 					success: function (response) {
 						try {
-							JSON.parse(response);
-							var obj = JSON.parse(response);
+							//JSON.parse(response);
+							var obj = response;
 		
 							if (obj.status == 'success') {
 								success_alert.fadeIn();

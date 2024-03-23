@@ -209,7 +209,7 @@
                 </div>
                 <!-- Form -->
                 <div class="form-area scheme-1 primary">
-                  <form action="php/sender.php" class="form-fields needs-validation ajax-form" novalidate="novalidate">
+                  <form id="contactForm" class="form-fields needs-validation ajax-form" novalidate="novalidate">
                     <div class="form-row row">
                       <div class="form-col form-floating col-12 col-md-6">
                         <input type="text" name="name" id="InputFloatingName" class="form-control" placeholder="Person name" required="required">
@@ -234,13 +234,6 @@
                       <div class="form-col form-floating col-12 col-md-6">
                         <input id="InputFloatingCity" name="city" class="form-control form-datalist" list="InputFloatingCityOptions" placeholder="City / Province" required="required">
                         <label class="form-label">City / Province</label>
-                        <datalist id="InputFloatingCityOptions">
-                          <option value="San Francisco"></option>
-                          <option value="New York"></option>
-                          <option value="Seattle"></option>
-                          <option value="Los Angeles"></option>
-                          <option value="Chicago"></option>
-                        </datalist>
                         <div class="invalid-feedback">Please enter your city.</div>
                         <div class="valid-feedback">Looks good.</div>
                       </div>
@@ -264,7 +257,7 @@
                       </div>
                       <div class="form-col col-12 col-md-6 align-h-right">
                         <!-- Button -->
-                        <button class="button arrow-button next scheme-1 primary">
+                        <button id="submitBtn" class="button arrow-button next scheme-1 primary">
                           <span class="arrow">
                             <span class="item"></span>
                             <span class="item"></span>
@@ -555,6 +548,8 @@
 
     <!-- Main JavaScript -->
     <script src="/js/main.js"></script>
+    
+
 </body>
 </html>
 
