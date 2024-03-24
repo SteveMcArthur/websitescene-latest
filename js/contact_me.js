@@ -3,7 +3,12 @@
 $(function() {
     $.ajax({//wakeup service
         type: 'GET',
-        url: "https://email-webservice.onrender.com/"
+        url: "https://email-webservice.onrender.com/",
+        cache: false,
+        success: function() {   
+        },
+        error: function() {
+        }
     });
 
 

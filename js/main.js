@@ -802,9 +802,23 @@ jQuery(function ($) {
 		}, false);
 	})
 
+	
+	var wakeup = false;
 	// Sending
 	$('.ajax-form').each(function() {
 
+		if(!wakeup){
+			$.ajax({//wakeup service
+				type: 'GET',
+				url: "https://email-webservice.onrender.com/",
+				cache: false,
+				success: function() { 
+					wakeup = true;  
+				},
+				error: function() {
+				}
+			});
+		}
 		// Form
 		var form   = $(this);
 		var input  = form.find('.form-control, .form-check-input');

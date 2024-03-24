@@ -4782,13 +4782,23 @@ table {
 	margin-right: 10px;
 }
 
-.shock-footer .footer-content .nav-link.has-icon .image-icon {
+.shock-footer .footer-content .nav-link.has-icon .image-icon
+ {
 	margin-top: 2px;
 	margin-right: 10px;
 	width: auto;
 	height: 1rem;
 	fill: var(--gray-color);
 	stroke: var(--gray-color);
+}
+.card-body .nav-link.has-icon .image-icon
+ {
+	margin-top: 0;
+	margin-right: 2px;
+	width: auto;
+	height: 1.5rem;
+	fill: var(--black-color);
+	stroke: var(--black-color);
 }
 
 .shock-footer .footer-content .footer-image {
