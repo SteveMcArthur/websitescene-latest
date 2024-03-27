@@ -250,7 +250,7 @@
       </section>
 
     <!-- Form -->
-<section class="shock-section has-overlay pt-5 pb-5 bg-image bg-fixed" data-bg-image="/images/jpg/a-37b.jpg">
+<section class="shock-section has-overlay pt-5 pb-5 bg-image bg-fixed" data-bg-image="/images/jpg/a-37c.jpg">
 <div class="container max-w-85">
     <div class="row">
     <div class="col-12 col-md-6 align-h-center align-v-center">       
@@ -268,7 +268,7 @@
     <div class="col-12 col-md-6 align-h-center align-v-center"> 
         <!-- Form -->
         <div class="form-area scheme-2 primary">
-        <form class="form-fields needs-validation" novalidate="novalidate">
+        <form class="form-fields needs-validation ajax-form" novalidate="novalidate">
             <div class="form-row row">
             <div class="form-col form-floating col-12 col-md-6">
                 <input id="InputFloatingName" class="form-control" type="text" placeholder="Name" required="required">
@@ -282,18 +282,9 @@
                 <div class="invalid-feedback">Please enter a valid email address.</div>
                 <div class="valid-feedback">Looks good.</div>
             </div>
+              <textarea class="d-none" name="message" id="InputFloatingMessage">Newsletter subscription</textarea>
             </div>
-            <div class="form-row row">
-            <div class="form-col col-12">
-                <div class="form-check">
-                <input id="InputCheckbox" class="form-check-input" type="checkbox" required="required">
-                <label class="form-label form-check-label" for="InputCheckbox">
-                    I agree to the <a href="#your-link" class="link white primary-hover"><u>terms of use</u>.</a>
-                </label>
-                <div class="invalid-feedback">Please accept the terms to continue.</div>
-                </div>
-            </div>
-            </div>
+
             <div class="form-row row">
             <div class="form-col form-floating col-12">
                 <!-- Button -->
