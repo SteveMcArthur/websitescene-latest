@@ -2613,7 +2613,7 @@ button {
 
 /* #region Content */
 
-.shock-main {	
+.wss-main {	
   -webkit-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
@@ -2728,7 +2728,7 @@ button {
 
 @media (max-width: 991px) {
 
-	.shock-main {	
+	.wss-main {	
 		overflow: hidden;
 	}
 
@@ -4967,3 +4967,8 @@ table {
 }
 
 /* #endregion Footer */
+.bg-image1 {
+	position: absolute;
+	top:-150px;
+	left:0;
+}

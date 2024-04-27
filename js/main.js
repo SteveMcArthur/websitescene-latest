@@ -259,7 +259,7 @@ jQuery(function ($) {
 	$(window).scroll(function () {
 
 		var current_position = $(window).scrollTop();
-		var widget = $('.shock-body .side-widget');
+		var widget = $('.wss-body .side-widget');
 
 		widget.each(function() {
 
