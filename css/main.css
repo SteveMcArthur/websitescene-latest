@@ -2187,7 +2187,7 @@ button {
 }
 
 .form-area .ajax-form.sending {
-	background-image: url(/assets/images/gif/loading.gif);
+	background-image: url(/images/gif/loading.gif);
 	pointer-events: none;
 	opacity: 0.25;
 }
