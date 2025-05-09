@@ -4712,6 +4712,7 @@ table {
 	color: var(--color-2);
 }
 
+
 .shock-footer .footer-content .footer-brand .site-title {
   font-family: var(--secondary-font);
   font-size: 2rem;
@@ -4966,4 +4967,12 @@ table {
 }
 .dynamic-slider .slide-expander {
 	display: none;
+}
+
+.shock-header .navbar .navbar-brand .logo-after-text {
+	text-shadow:
+   -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+     1px 1px 0 #fff;
 }
