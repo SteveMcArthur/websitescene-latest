@@ -1,47 +1,3 @@
-/*----------------------------------------------
-
-[Main JavaScript]
-
-Theme   : Shock
-Version : 1.0.0
-Author  : Codings
-Support : codings.dev
-
-----------------------------------------------*/
-
-/*----------------------------------------------
-
-[Content Index]
-
-1. Preloader
-2. Popup
-3. Side Widget
-4. Icon
-5. One Page Link
-6. Helper
-7. Slider
-8. Shuffle
-9. Lax
-10. Lightbox
-11. Load More
-12. Form Sending
-13. Tooltip
-14. Animated Underline
-15. Progress bar
-16. Typed Text
-17. Circular Text
-18. Price Switch
-19. Scroll Down
-20. ZZZ Divider
-
-----------------------------------------------*/
-
-/*----------------------------------------------
-1. Preloader
-----------------------------------------------*/
-
-// #region Preloader
-
 jQuery(function ($) {
 	'use strict';
 
@@ -803,22 +759,9 @@ jQuery(function ($) {
 	})
 
 	
-	var wakeup = false;
 	// Sending
 	$('.ajax-form').each(function() {
 
-		if(!wakeup){
-			$.ajax({//wakeup service
-				type: 'GET',
-				url: "https://email-webservice.onrender.com/",
-				cache: false,
-				success: function() { 
-					wakeup = true;  
-				},
-				error: function() {
-				}
-			});
-		}
 		// Form
 		var form   = $(this);
 		var input  = form.find('.form-control, .form-check-input');
@@ -846,17 +789,15 @@ jQuery(function ($) {
            		var message = form.find("textarea#InputFloatingMessage")[0].value;
 				var formData = {
 					"subject": name+" sent you an enquiry via websitescene.co.uk",
-                    "name": name,
                     //"phone": phone || '00000',
                     "email": email,
-                    "message": message,
-                    'form_api_token':'e11h1zo3d731'
+                    "message": message
 				}
 		
 				// Ajax Call
 				$.ajax({
 					type: 'POST',
-					url: "https://email-webservice.onrender.com/email/addemail",
+					url: "https://formspree.io/f/mwpwbekg",
 					dataType: "JSON",
 					data: formData,
 					success: function (response) {
@@ -864,7 +805,7 @@ jQuery(function ($) {
 							//JSON.parse(response);
 							var obj = response;
 		
-							if (obj.status == 'success') {
+							if (obj.ok) {
 								success_alert.fadeIn();
 								error_alert.hide();
 								input.val('');
